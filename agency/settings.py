@@ -30,11 +30,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'], cast
 
 
 # Add CSRF_TRUSTED_ORIGINS
-CSRF_TRUSTED_ORIGINS = [
-    'https://3f89-105-21-33-246.ngrok-free.app',
-    'http://127.0.0.1:8080',  # Optional: Include localhost for local testing
-    'http://localhost:8080',  # Optional: Include localhost for local testing
-]
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS')
 
 # Application definition
 
