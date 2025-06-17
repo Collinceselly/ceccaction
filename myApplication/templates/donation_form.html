@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to CeCCA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <h1 class="cecca-statement">Centre for Conflict and Climate Action (CeCCA)</h1>
+        <div class="donation-container">
+            <h2>Support Our Cause</h2>
+            <form id="donation-form" action="/donate/" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="amount">Donation Amount (KES)</label>
+                    <input type="number" id="amount" name="amount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Donate Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('donation-form').addEventListener('submit', function(event) {
+            const amount = document.getElementById('amount').value;
+            if (!amount || amount <= 0) {
+                alert('Please enter a valid donation amount.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

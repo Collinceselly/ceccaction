@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <p>Active section: {{ active_section }}</p>
+    <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

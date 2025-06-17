@@ -1,0 +1,47 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeCCA</title>
+    <link href="{% static 'assets/css/trial.css'%}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'assets/img/logo1.JPG'%}" alt="Company Logo" class="logo-img">
+        </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#Get involved">Get involved</a></li>
+            <li><a href="#reviews">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Center for Conflict and Climate Action</h1>
+            <p>CeCCA - Committed to reducing climate-induced conflicts</p>
+            <p>Vision: To become a leading hub for information, analysis and response on the Climate-Conflict Nexus in the ASAL region by bridging the gap between data, policy, and action, we strive to build a resilient society that thrives in the face of environmental adversity.</p>
+            <p>Mission: To Avail Early warning and Response initiatives on Climate and Conflict, empowering Stakeholders and Communities to take timely and informed action against climate-induced Conflicts and Shocks in the ASAL regions.</p>
+            <div class="buttons">
+                <a href="#about" class="btn primary">About Us</a>
+                <a href="#services" class="btn secondary">Programs</a>
+                <a href="#contact" class="btn secondary">Contact us</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        h2 { color: #4CAF50; }
+        a { display: block; margin: 10px 0; color: #4CAF50; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        #myhome { color: blueviolet;}
+    </style>
+</head>
+<body>
+    <h1>Payment Confirmation</h1>
+    <p>Order Tracking ID: {{ tracking_id }}</p>
+    <p>Order ID: {{ order_id }}</p>
+    <p>Amount: {{ amount }} KES</p>
+    <p>Email: {{ email }}</p>
+    <h2>{{ message }}</h2>
+    <p>We appreciate your support!</p>
+    <p>Transaction Status: {{ transaction_status }}</p>
+    {% if transaction_status == 1 %}
+        <p>Your payment has been successfully processed!</p>
+    {% elif transaction_status == "PENDING" %}
+        <p>Your payment is being processed. We’ll notify you once it’s complete.</p>
+    {% else %}
+        <p>There was an issue with your payment. Please contact support.</p>
+    {% endif %}
+    <a href="/donate/">Make Another Donation</a>
+    <a id="myhome" href="/">Return to Homepage</a> 
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        h2 { color: #4CAF50; }
+        p { margin: 10px 0; }
+        a { display: block; margin: 10px 0; color: #4CAF50; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .details { margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-radius: 5px; display: inline-block; }
+        .details p { margin: 5px 0; }
+        .status-message.success { color: #4CAF50; font-weight: bold; }
+        .status-message.pending { color: #FFA500; font-weight: bold; }
+        .status-message.error { color: #FF0000; font-weight: bold; }
+        #back_home {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ message }}</h2>
+    <p>We appreciate your support!</p>
+    <div class="details">
+        <p><strong>Amount:</strong> {{ amount|default:"Not available" }} KES</p>
+        <p><strong>Email Address:</strong> {{ email|default:"Not available" }}</p>
+        <p><strong>Transaction Status:</strong> {{ transaction_status|default:"Unknown" }}</p>
+        <p><strong>Order ID:</strong> {{ order_id|default:"Not available" }}</p>
+        <p><strong>Tracking ID:</strong> {{ tracking_id|default:"Not available" }}</p>
+    </div>
+    {% if transaction_status|lower == "completed" or transaction_status|lower == "success" %}
+        <p class="status-message success">Your payment has been successfully processed!</p>
+    {% elif transaction_status|lower == "pending" or transaction_status|lower == "processing" %}
+        <p class="status-message pending">Your payment is being processed. We’ll notify you once it’s complete.</p>
+    {% elif transaction_status|lower == "failed" or transaction_status|lower == "invalid" %}
+        <p class="status-message error">There was an issue with your payment. Please contact support.</p>
+    {% else %}
+        <p class="status-message error">Transaction status is unknown ({{ transaction_status }}). Please contact support.</p>
+    {% endif %}
+    <a href="/donate/">Make Another Donation</a>
+    <a id="back_home" href="/">Return to the Website</a>
+</body>
+</html>

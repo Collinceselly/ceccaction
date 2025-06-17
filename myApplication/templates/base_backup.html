@@ -1,0 +1,358 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CeCCA</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/logo1.JPG' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="" class="logo d-flex align-items-center">
+                <img src="{% static 'assets/img/logo1.JPG' %}" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Programs</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="{% static 'assets/img/new_conflict2.jpg' %}" class="d-block w-100" alt="First Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="animate__animated animate__fadeInDown">Center for Conflict and Climate Action</h5>
+                            <p class="animate__animated animate__fadeInUp">CeCCA - Committed to reducing climate-induced conflicts.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="{% static 'assets/img/ai_conflict1.png' %}" class="d-block w-100" alt="Second Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="animate__animated animate__fadeInDown">Center for Conflict and Climate Action</h5>
+                            <p class="animate__animated animate__fadeInUp">To become a leading hub for information, analysis and response on the Climate-Conflict Nexus in the ASAL region.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="{% static 'assets/img/ai_conflict2.png' %}" class="d-block w-100" alt="Third Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="animate__animated animate__fadeInDown">Center for Conflict and Climate Action</h5>
+                            <p class="animate__animated animate__fadeInUp">To Avail Early warning and Response initiatives on Climate and Conflict.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>About Us</h2>
+                <p>Who we are</p>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Vision</h3>
+                        <p>To become a leading hub for information, analysis and response on the Climate-Conflict Nexus in the ASAL region.</p>
+                        <p>By bridging the gap between data, policy, and action, we strive to build a resilient society that thrives in the face of environmental adversity.</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Mission</h3>
+                        <p>To Avail Early warning and Response initiatives on Climate and Conflict, empowering Stakeholders and Communities to take timely and informed action against climate-induced Conflicts and Shocks in the ASAL regions.</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Our Mandate</h3>
+                        <ul>
+                            <li><i class="bi bi-check2-circle"></i> <span>Conducting detailed research to uncover the root causes and impacts of climate change on conflicts.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Delivering timely analyses to inform policymakers, humanitarian actors, and other stakeholders.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Advocating for inclusive, gender-sensitive approaches to resilience-building and peace initiatives.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Developing practical frameworks that integrate climate resilience into local, national, and regional agendas.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Promoting early warning systems to detect emerging risks and enable preventive actions.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Raising awareness and fostering knowledge-sharing on the intersection of climate change and conflict.</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Our Impact</h3>
+                        <h5>Since our inception, CeCCA has:</h5>
+                        <ul>
+                            <li><i class="bi bi-check2-all"></i> <span>Built a strong foundation of data and knowledge on climate-induced conflicts across Kenya.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Supported local institutions in enhancing their capacity for conflict prevention and resilience building.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Developed innovative early warning tools to track and respond to emerging climate-related risks.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Collaborated with regional and international partners to integrate climate resilience into peace and development agendas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3>A Network for Change</h3>
+                        <p>CeCCA’s efforts are deeply rooted in collaboration. By bringing together diverse stakeholders—from government entities to civil society organizations—we create a unified front against the challenges posed by climate change.</p>
+                        <p>As part of a broader national effort, CeCCA draws inspiration from and contributes to global and regional frameworks addressing the nexus of climate and conflict.</p>
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Our Work and Priority Areas</h3>
+                        <p>At the Centre for Conflict and Climate Action (CeCCA), we are dedicated to addressing the critical challenges posed by climate-induced conflicts across Kenya and beyond.</p>
+                        <h3>Looking Ahead</h3>
+                        <p>CeCCA is steadfast in its commitment to creating a peaceful, sustainable future for communities grappling with the challenges of climate-induced conflicts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2 style="color: white;">Programs</h2>
+                <p style="color: white;">What we do offer</p>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-cash-stack" style="color: #0dcaf0;"></i>
+                            </div>
+                            <h3 style="color: #0dcaf0;">Research and Analysis</h3>
+                            <p style="color: white; font-size: 20px;">Through in-depth studies, research and analysis, we provide data-driven insights into the complex dynamics between climate change and conflict.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-calendar4-week" style="color: #fd7e14;"></i>
+                            </div>
+                            <h3 style="color: #fd7e14;">Capacity Building and Advocacy</h3>
+                            <p style="color: white; font-size: 20px;">Through training programs and advocacy efforts, we empower communities, governments, and organizations to address climate-induced conflicts sustainably.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-chat-text" style="color: #20c997;"></i>
+                            </div>
+                            <h3 style="color: #20c997;">Policy Development</h3>
+                            <p style="color: white; font-size: 20px;">Working closely with governments, NGOs, and international bodies, we contribute to the formulation of policies that integrate climate and conflict considerations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-credit-card-2-front" style="color: #df1529;"></i>
+                            </div>
+                            <h3 style="color: #df1529;">Early Warning Systems</h3>
+                            <p style="color: white; font-size: 20px;">Our Early Warning Systems leverage data and technology to detect emerging conflicts and climate threats, enabling proactive response.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-globe" style="color: #6610f2;"></i>
+                            </div>
+                            <h3 style="color: #6610f2;">Awareness and Knowledge Sharing</h3>
+                            <p style="color: white; font-size: 20px;">We create platforms for dialogue, learning, and collaboration among researchers, policymakers, and the public.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-item position-relative" style="background: transparent !important;">
+                            <div class="icon">
+                                <i class="bi bi-clock" style="color: #f3268c;"></i>
+                            </div>
+                            <h3 style="color: #f3268c;">Climate Mitigation Measures</h3>
+                            <p style="color: white; font-size: 20px;">We encourage and promote the use of renewable energy sources solar and windpower and efficient energy use practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call To Action Section -->
+        <section id="get-involved" class="call-to-action section dark-background">
+            <div class="container">
+                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-9 text-center text-xl-start">
+                        <h3>Get Involved</h3>
+                        <p>Be the Change: Join Us in the Fight Against Conflicts and Climate Challenges!</p>
+                        <p>Whether you volunteer, donate, or advocate, partner with us, your contribution makes a difference.</p>
+                    </div>
+                    <div class="col-xl-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#get-involved">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Get Involved Section -->
+        <section id="get-involved">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Become a Volunteer</h3>
+                        <p>Make an impact, gain experience, and be part of something bigger. Join us in creating positive change!</p>
+                        <a class="cta-btn align-middle" href="#contact">Contact us to become a volunteer</a>
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                        <img src="{% static 'assets/img/volunteer-0.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <img src="{% static 'assets/img/partneship-1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Enroll to our Partnership Opportunities</h3>
+                        <p>Join our network of changemakers! Partner with us to drive meaningful impact and create sustainable solutions.</p>
+                        <a class="cta-btn align-middle" href="#contact">Contact us for enrollment</a>
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Be part of our Advocacy and Awareness Programs</h3>
+                        <p>Your voice matters! Help us spread awareness and advocate for meaningful change through campaigns and events.</p>
+                        <a class="cta-btn align-middle" href="#contact">Contact us to become a volunteer</a>
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                        <img src="{% static 'assets/img/advocacy-1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <img src="{% static 'assets/img/donations-1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Support through Donations</h3>
+                        <p>Every donation fuels our mission to create lasting changes. Your support helps provide essential resources.</p>
+                        <div class="col-md-12 text-center">
+                            <a class="get_invloved_btn" href="/donate/">Donate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+            </div>
+            <div class="container" data-aos="fade" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p style="font-weight: bold;">CJs Building, Koinage Street, Nairobi City, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p style="font-weight: bold;">+254 704 346 490</p>
+                                <p style="font-weight: bold;">+254 729 276 472</p>
+                            </div>
+                        </div>
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p style="font-weight: bold;">climate_conflict@cecca.co.ke</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <form action="{% url 'contact' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                            {% csrf_token %}
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <div class="loading" style="display: none;">Loading</div>
+                                    <div class="error-message" style="display: none;"></div>
+                                    <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer dark-background">
+        <div class="container">
+            <h3 class="sitename">CeCCA</h3>
+            <p>CeCCA - Committed to reducing climate-induced conflicts.</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">CeCCA</strong> <span>All Rights Reserved</span>
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">Collince Selly</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <!-- Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
